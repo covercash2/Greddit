@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.spacehq</groupId>
+    <artifactId>greddit</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+
+    <name>Greddit</name>
+    <description>An API wrapper for Reddit written in Groovy.</description>
+    <url>http://github.com/Steveice10/Greddit/</url>
+
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>http://www.opensource.org/licenses/mit-license.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git@github.com:Steveice10/Greddit.git</connection>
+        <developerConnection>scm:git:git@github.com:Steveice10/Greddit.git</developerConnection>
+        <url>git@github.com:Steveice10/Greddit/</url>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>spacehq</id>
+            <name>spacehq-releases</name>
+            <url>http://repo.spacehq.org/content/repositories/release/</url>
+        </repository>
+        <snapshotRepository>
+            <id>spacehq</id>
+            <name>spacehq-snapshots</name>
+            <url>http://repo.spacehq.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <developers>
+        <developer>
+            <id>steveice10</id>
+            <name>Steveice10</name>
+            <email>Steveice10@gmail.com</email>
+        </developer>
+    </developers>
+
+    <properties>
+        <groovyversion>2.8.0</groovyversion>
+        <groovycompilerversion>2.1.8</groovycompilerversion>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>${groovycompilerversion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.spacehq</groupId>
+            <artifactId>gcommons</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <defaultGoal>clean install</defaultGoal>
+        <sourceDirectory>src/main/groovy</sourceDirectory>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <compilerId>groovy-eclipse-compiler</compilerId>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.codehaus.groovy</groupId>
+                        <artifactId>groovy-eclipse-compiler</artifactId>
+                        <version>${groovyversion}-01</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.codehaus.groovy</groupId>
+                        <artifactId>groovy-eclipse-batch</artifactId>
+                        <version>${groovycompilerversion}-01</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+</project>
