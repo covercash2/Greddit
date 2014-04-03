@@ -71,7 +71,7 @@ Error handling callbacks will always get a RequestException value.
 --------
 
 Greddit uses Maven to manage dependencies. Simply run 'mvn clean install' in the source's directory.
-You can also download a build <b>[here](http://build.spacehq.org/job/Greddit/)</b>.
+You can also download a build <b>[here](http://build.spacehq.org/browse/GREDDIT-MAIN)</b>.
 
 
 <b>License</b>
