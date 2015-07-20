@@ -1,19 +1,9 @@
-<b><center><h1>Greddit</h></center></b>
-==========
-
-
-<b>About Greddit</b>
---------
-
+# Greddit
 Greddit is a Reddit API wrapper written in Groovy. It is a complete implementation of the API with all functions implemented, including OAuth functions.
 Greddit uses a request scheduler thread for asynchronous calls and to allow the library to enforce the two-calls-per-second limit (can be disabled).
 
-
-<b>Examples</b>
---------
-
-Normal Auth:
-
+## Examples
+### Normal Auth
 ```groovy
 // Create a new client instance with a unique User Agent.
 Reddit reddit = new Reddit("bot/1.0 by Author")
@@ -34,8 +24,7 @@ reddit.redditAuth.me({
 ...
 ```
 
-OAuth:
-
+### OAuth
 ```groovy
 // Create a new client instance with a unique User Agent.
 Reddit reddit = new Reddit("Username", "bot/1.0 by Steveice10")
@@ -63,19 +52,14 @@ reddit.redditOAuth.me({
 ...
 ```
 
+### Additional Notes
 "reddit.dispose()" must be called when you have finished with the client instance as the client spawns a scheduler thread for async operations.
 Error handling callbacks will always get a RequestException value.
 
-
-<b>Building the Source</b>
---------
-
+## Building the Source
 Greddit uses Maven to manage dependencies. Simply run 'mvn clean install' in the source's directory.
-Snapshots (if any exist) can be downloaded <b>[here](http://repo.spacehq.org/content/repositories/snapshots/org/spacehq/greddit)</b>.
-Releases (if any exist) can be downloaded <b>[here](http://repo.spacehq.org/content/repositories/release/org/spacehq/greddit)</b>.
 
+Builds can be downloaded **[here](http://build.spacehq.org/job/Greddit)**.
 
-<b>License</b>
----------
-
-Greddit is licensed under the <b>[MIT license](http://www.opensource.org/licenses/mit-license.html)</b>.
+## License
+Greddit is licensed under the **[MIT license](http://www.opensource.org/licenses/mit-license.html)**.

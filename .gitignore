@@ -1,14 +1,13 @@
 bin
 lib
-
-.groovy
+target
+testing
 
 .settings
 .classpath
 .project
+.directory
 
 *.iml
 .idea
-
-target
 
