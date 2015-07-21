@@ -59,7 +59,8 @@ Error handling callbacks will always get a RequestException value.
 ## Building the Source
 Greddit uses Maven to manage dependencies. Simply run 'mvn clean install' in the source's directory.
 
-Builds can be downloaded **[here](http://build.spacehq.org/job/Greddit)**.
+Builds can be downloaded **[here](https://build.spacehq.org/job/Greddit)**.
+Javadocs can be found **[here](https://build.spacehq.org/job/Greddit/javadoc)**.
 
 ## License
 Greddit is licensed under the **[MIT license](http://www.opensource.org/licenses/mit-license.html)**.
