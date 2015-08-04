@@ -66,6 +66,10 @@ public class Link {
      */
     boolean hidden
     /**
+     * Whether the link is archived
+     */
+    boolean archived
+    /**
      * Whether the link is a self-post.
      */
     boolean is_self
@@ -165,6 +169,54 @@ public class Link {
      * Whether the link is stickied.
      */
     boolean stickied
+    /**
+     * from ?
+     */
+    String from
+    /**
+     * from id ?
+     */
+    String from_id
+    /**
+     * from kind ?
+     */
+    String from_kind
+    /**
+     * gilded
+     */
+    boolean gilded
+    /**
+     * mod reports ?
+     */
+    List mod_reports
+    /**
+     * post_hint
+     */
+    String post_hint
+    /**
+     * preview ?
+     */
+    Map preview
+    /**
+     * removal reason
+     */
+    String removal_reason
+    /**
+     * report reasons
+     */
+    List report_reasons
+    /**
+     * suggested sort
+     */
+    String suggested_sort
+    /**
+     * user reports
+     */
+    List user_reports
+    /**
+     * hide score ?
+     */
+    boolean hide_score
 
     /**
      * Creates a new Link instance.
